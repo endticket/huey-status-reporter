@@ -25,7 +25,7 @@ Docker?
 -------------
 Yes!
 Just run
-+ docker run --env HUEY_LISTENER_REDIS_HOST=172.17.42.1 endticket/huey-reporter
++ docker run --env HUEY_LISTENER_REDIS_HOST=your.redis.host endticket/huey-reporter
 
 Environment variables
 -------------

@@ -1,0 +1,27 @@
+{
+  "name": "huey-progress-reporter",
+  "version": "0.1.0",
+  "description": "Reports huey job progress over websocket",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "lodash": "^3.6.0",
+    "node-redis-pubsub": "^0.5.0",
+    "websocket": "^1.0.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/huey-reporter config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/endticket/huey-progress-reporter.git"
+  },
+  "author": "Endticket",
+  "license": "WTFPL",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/endticket/huey-progress-reporter/issues"
+  }
+}

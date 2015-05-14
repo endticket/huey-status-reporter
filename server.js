@@ -57,7 +57,7 @@ config.configFile(process.argv[2], function (config, oldConfig) {
 
         });
     });
-    pubsub.on("*", function (data, channel) {
+    pubsub.on("*-queue", function (data, channel) {
         if (data.hasOwnProperty("id") && data.hasOwnProperty("task")) {
             subscribers_for_key = registry.get_clients_for(data["id"]);
             subscribes_for_all = registry.get_clients_for("all");

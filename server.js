@@ -13,8 +13,14 @@ var _ = require('lodash');
 config.configFile(process.argv[2], function (config, oldConfig) {
     var server = http.createServer(function(request, response) {
         console.log((new Date()) + ' Received request for ' + request.url);
-        response.writeHead(404);
-        response.end();
+        if (request.url == "/healthcheck") {
+            response.writeHead(200);
+            response.write("OK");
+            response.end();
+        } else {
+            response.writeHead(404);
+            response.end();
+        }
     });
     server.listen(config.listenPort, function() {
         console.log((new Date()) + ' Server is listening on port:'+ config.listenPort);
